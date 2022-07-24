@@ -1,28 +1,43 @@
-const countdown = () => {
-  // Specify the date and time we are counting down to.
-  const countDate = new Date("July 22, 2022 00:00:00").getTime();
-  const now = new Date().getTime();
-  const remainingTime = countDate - now;
+function getTimeRemaining(endtime) {
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor((t / 1000) % 60);
+  var minutes = Math.floor((t / 1000 / 60) % 60);
+  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  return {
+    total: t,
+    days: days,
+    hours: hours,
+    minutes: minutes,
+    seconds: seconds
+  };
+}
 
-  const second = 1000;
-  const minute = second * 60;
-  const hour = minute * 60;
-  const day = hour * 24;
+function initializeClock(id, endtime) {
+  var clock = document.getElementById(id);
+  var daysSpan = clock.querySelector(".days-main");
+  var hoursSpan = clock.querySelector(".hours-main");
+  var minutesSpan = clock.querySelector(".minutes-main");
+  var secondsSpan = clock.querySelector(".seconds-main");
 
-  const textDay = Math.floor(remainingTime / day);
-  const textHour = Math.floor((remainingTime % day) / hour);
-  const textMinute = Math.floor((remainingTime % hour) / minute);
-  const textSecond = Math.floor((remainingTime % minute) / second);
+  function updateClock() {
+    var t = getTimeRemaining(endtime);
 
-  document.querySelector(".day").innerText = textDay > 0 ? textDay : 0;
-  document.querySelector(".hour").innerText = textHour > 0 ? textHour : 0;
-  document.querySelector(".minute").innerText = textMinute > 0 ? textMinute : 0;
-  document.querySelector(".second").innerText = textSecond > 0 ? textSecond : 0;
-};
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+      var deadline = new Date(Date.parse(new Date()) + 6 * 1000);
+      initializeClock('countdown-main', deadline);
+    }
 
-// should use 500 as setInterval won't always run on time.
-setInterval(countdown, 500);
+    daysSpan.innerHTML = ("0" + t.days + " :");
+    hoursSpan.innerHTML = ("0" + t.hours + " :").slice(-4);
+    minutesSpan.innerHTML = ("0" + t.minutes + " :").slice(-4);
+    secondsSpan.innerHTML = ("0" + t.seconds).slice(-2);
+  }
 
+  updateClock();
+  var timeinterval = setInterval(updateClock, 1000);
+}
 
-
-
+var deadline = new Date(Date.parse(new Date()) + 10000 * 10000);
+initializeClock("countdown-main", deadline);
