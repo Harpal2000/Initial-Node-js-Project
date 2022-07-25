@@ -28,11 +28,15 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.5/umd/popper.min.js"
+        integrity="sha512-8cU710tp3iH9RniUh6fq5zJsGnjLzOWLWdZqBMLtqaoZUA6AWIE34lwMB3ipUNiTBP5jEZKY95SfbNnQ8cCKvA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
     <style>
         .b1 {
@@ -69,6 +73,10 @@
             border-radius: 10px;
         }
 
+        .how-to-play-img {
+            margin: -14rem 0 0 36rem;
+        }
+
         @media all and (max-width: 1100px) {
             .daily-auction-text {
                 font-size: 4rem;
@@ -85,6 +93,10 @@
                 background-color: brown;
                 color: white;
                 margin: 0 0 0 25rem;
+            }
+
+            .how-to-play-img {
+                margin: -14rem 0 0 31rem;
             }
         }
 
@@ -104,6 +116,10 @@
                 background-color: brown;
                 color: white;
                 margin: 0 0 0 25rem;
+            }
+
+            .how-to-play-img {
+                margin: 2rem 0 0 0rem;
             }
         }
 
@@ -130,6 +146,10 @@
                 display: inline-block;
                 border-radius: 10px;
             }
+
+            .how-to-play-img {
+                margin: 2rem 0 0 0rem;
+            }
         }
 
         @media all and (max-width: 800px) {
@@ -154,6 +174,10 @@
                 width: 18rem;
                 display: inline-block;
                 border-radius: 10px;
+            }
+
+            .how-to-play-img {
+                margin: 2rem 0 0 0rem;
             }
         }
 
@@ -180,6 +204,10 @@
                 display: inline-block;
                 border-radius: 10px;
             }
+
+            .how-to-play-img {
+                margin: 2rem 0 0 0rem;
+            }
         }
 
         @media all and (max-width: 600px) {
@@ -205,6 +233,10 @@
                 display: inline-block;
                 border-radius: 10px;
             }
+
+            .how-to-play-img {
+                margin: 2rem 0 0 0rem;
+            }
         }
 
         @media all and (max-width: 500px) {
@@ -223,6 +255,10 @@
                 background-color: brown;
                 color: white;
                 margin: 0 0 0 8rem;
+            }
+
+            .how-to-play-img {
+                margin: 2rem 0 0 0rem;
             }
         }
 
@@ -243,12 +279,16 @@
                 color: white;
                 margin: 0 0 0 8rem;
             }
+
+            .how-to-play-img {
+                margin: 2rem 0 0 0rem;
+            }
         }
     </style>
 </head>
 
 <body>
-
+    
     <!-- Nav bar -->
     <nav class="n1 fixed-top">
 
@@ -257,9 +297,10 @@
 
             <li class="items"><a href="index.html">Home</a></li>
             <li class="items"><a href="auctions.html">Auctions</a></li>
-            <li class="items"><a href="daily-auctions.html">Daily Auctions</a></li>
+            <li class="items"><a href="daily-auction.html">Daily Auctions</a></li>
             <li class="items"><a href="winners.html">Winners</a></li>
-            <li class="items"><a href="#">Announcements</a></li>
+            <li class="items"><a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" tooltip-bs-bg="white"
+                    title="Hurry !! 50% off on all Auctions !! Coupon Code `DRM50B` Use it before expired !!">Announcements</a></li>
             <li class="items"><a href="offers">offers</a></li>
             <li class="items"><a href="#"><img src="images/login1.png"></img></a></li>
             <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
@@ -267,7 +308,7 @@
     </nav>
     <!-- Slider -->
     <!-- style="color:rgb(196, 65, 65)" -->
-    <div style="background-color:  #1f2833;">
+    <div style="background-color:  #1f2833;" class="pt-5">
         <div class="container-fluid  mb-1 " style="padding:0 0 0 0">
             <div class="slider1">
                 <!-- fade css -->
@@ -371,10 +412,8 @@
         </div>
     </div>
     <!-- Auction Timer -->
-
     <div class="container-fluid ">
         <div class="container ">
-
             <h1 class="countdown-title-main fw-normal">Next Auction Start's In</h1>
 
             <div id="countdown-main" class="countdown-main">
@@ -955,7 +994,7 @@
                 </div>
 
             </div>
-            <a class="btn ml-20 card-bottom-btn" style="color:white;" role="button">See
+            <a href="daily-auction.html" class="btn ml-20 card-bottom-btn" style="color:white;" role="button">See
                 More</a>
         </div>
     </div>
@@ -1007,15 +1046,15 @@
                 <div class="content">
                     <div class="place">
                         <span class="fas fa-map-marker-alt"></span>
-                        <span class="text">Tarn-Taran India <i>|</i> Gurdaspur India</span>
+                        <span class="text">Tarn-Taran India <i>|</i> Batala India</span>
                     </div>
                     <div class="phone">
                         <span class="fas fa-phone-alt"></span>
-                        <span class="text">+089-765432100 <i>|</i> +916288347438</span>
+                        <span class="text">+917528955331 <i>|</i> +918437361120</span>
                     </div>
                     <div class="email">
                         <span class="fas fa-envelope"></span>
-                        <span class="text">abc@example.com <i>|</i> xyz@examplr.com</span>
+                        <span class="text">harpalinder12@gmail.com.com </span>
                     </div>
                 </div>
             </div>
@@ -1055,6 +1094,13 @@
                 $('.items').toggleClass("show");
                 $('ul li').toggleClass("hide");
             });
+
+            // $('[data-toggle="tooltip"]').tooltip()
+
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl)
+            })
         });
 
 

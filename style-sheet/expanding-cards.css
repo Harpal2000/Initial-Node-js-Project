@@ -28,6 +28,7 @@
   color: #00a7ff;
   transition: 0.1s;
   user-select: none;
+  text-decoration: none;
 }
 
 .prev1:hover,
