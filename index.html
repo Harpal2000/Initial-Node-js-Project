@@ -66,6 +66,11 @@
             color: white;
             margin: 0 0 0 43.7rem;
         }
+        .user-product-btn {
+            background-color: brown;
+            color: white;
+            margin: 2rem 0 0 1rem;
+        }
 
         .container-cards {
             width: 18rem;
@@ -74,7 +79,7 @@
         }
 
         .how-to-play-img {
-            margin: -14rem 0 0 36rem;
+            margin: -14rem 0 0 48rem;
         }
 
         @media all and (max-width: 1100px) {
@@ -198,6 +203,7 @@
                 color: white;
                 margin: 0 0 0 16rem;
             }
+           
 
             .container-cards {
                 width: 18rem;
@@ -207,6 +213,13 @@
 
             .how-to-play-img {
                 margin: 2rem 0 0 0rem;
+            }
+
+            .lft img {
+                display: inline-block;
+                width: 100%;
+                height: 320px;
+                width: 380px;
             }
         }
 
@@ -227,11 +240,19 @@
                 color: white;
                 margin: 0 0 0 14.4rem;
             }
+            .countdown-title-main {
+                font-size: 2.8rem;
+            }
+           
 
             .container-cards {
                 width: 16rem;
                 display: inline-block;
                 border-radius: 10px;
+            }
+            .lft h1 {
+                display: block;
+                font-size: 1.6rem;
             }
 
             .how-to-play-img {
@@ -250,6 +271,14 @@
                 padding-right: 0px;
                 padding-left: 1rem;
             }
+            .lft h1 {
+                display: block;
+                font-size: 1.4rem;
+            }
+            .countdown-title-main {
+                font-size: 2.4rem;
+            }
+           
 
             .card-bottom-btn {
                 background-color: brown;
@@ -259,6 +288,13 @@
 
             .how-to-play-img {
                 margin: 2rem 0 0 0rem;
+            }
+
+            .lft img {
+                display: inline-block;
+                width: 100%;
+                height: 320px;
+                width: 380px;
             }
         }
 
@@ -280,15 +316,43 @@
                 margin: 0 0 0 8rem;
             }
 
+            .lft h1 {
+                display: block;
+                font-size: 1.1rem;
+            }
+
             .how-to-play-img {
                 margin: 2rem 0 0 0rem;
+            }
+
+            .lft img {
+                display: inline-block;
+                width: 100%;
+                height: 320px;
+                width: 352px;
+            }
+            .timer-img{
+                margin:0 0 0 0;
+            }
+
+            .countdown-title-main {
+                font-size: 1.9rem;
+            }
+
+            .countdown-main {
+                font-family: sans-serif;
+                color: rgb(0, 0, 0);
+                display: inline-block;
+                font-weight: 100;
+                text-align: center;
+                font-size: 30px;
             }
         }
     </style>
 </head>
 
 <body>
-    
+
     <!-- Nav bar -->
     <nav class="n1 fixed-top">
 
@@ -300,7 +364,8 @@
             <li class="items"><a href="daily-auction.html">Daily Auctions</a></li>
             <li class="items"><a href="winners.html">Winners</a></li>
             <li class="items"><a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" tooltip-bs-bg="white"
-                    title="Hurry !! 50% off on all Auctions !! Coupon Code `DRM50B` Use it before expired !!">Announcements</a></li>
+                    title="Hurry !! 50% off on all Auctions !! Coupon Code `DRM50B` Use it before expired !!">Announcements</a>
+            </li>
             <li class="items"><a href="offers">offers</a></li>
             <li class="items"><a href="#"><img src="images/login1.png"></img></a></li>
             <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
@@ -412,11 +477,14 @@
         </div>
     </div>
     <!-- Auction Timer -->
-    <div class="container-fluid ">
+    <div class="container-fluid timer-img ">
+        <a href="user-product-add.html" class="btn ml-20 user-product-btn" style="color:white;" role="button">Add Your Product</a>
         <div class="container ">
             <h1 class="countdown-title-main fw-normal">Next Auction Start's In</h1>
 
+
             <div id="countdown-main" class="countdown-main">
+                
                 <div class="countdown-number-main">
                     <span class="days-main countdown-time-main"></span>
                     <span class="countdown-text-main">DAYS</span>
@@ -434,7 +502,9 @@
                     <span class="countdown-text-main">SECONDS</span>
                 </div>
                 <script src="java-script/clock.js"></script>
+                
             </div>
+            
 
             <div class="how-to-play-img ">
                 <aside class="lft">
@@ -444,6 +514,8 @@
 
         </div>
     </div>
+
+    
 
     <!-- Cards And Timer -->
     <div class=" pt-4 pb-3 mt-5 container-cards1">

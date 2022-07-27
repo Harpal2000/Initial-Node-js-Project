@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style-sheet/admin-style.css">
+    <link rel="stylesheet" href="/style-sheet/home-style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+
+    <nav class="n1" id="navbar">
+
+        <ul class="mb-0 nav-content">
+            <li class="logo"><img src="images/logo1.png" height="30px" style="padding-bottom:8px"></img></li>
+            <li class="items"><a href="index.html">Home</a></li>
+            <li class="items"><a href="auctions.html">Auctions</a></li>
+            <li class="items"><a href="daily-auction.html">Daily Auctions</a></li>
+            <li class="items"><a href="winners.html">Winners</a></li>
+            <li class="items"><a href="#">Announcements</a></li>
+            <li class="items"><a href="#">offers</a></li>
+            <li class="items"><a href="#"><img src="images/login1.png"></img></a></li>
+            <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
+        </ul>
+    </nav>
+
+
+    <button type="button" class="crud-button">
+        <span class="button__text">ADD</span>
+        <span class="button__icon">
+            <ion-icon name="add-outline"></ion-icon>
+        </span>
+    </button>
+    <button type="button" class="crud-button">
+        <span class="button__text">Delete</span>
+        <span class="button__icon">
+            <ion-icon name="trash-outline"></ion-icon>
+        </span>
+    </button>
+    <button type="button" class="crud-button">
+        <span class="button__text">Update</span>
+        <span class="button__icon">
+            <ion-icon name="refresh-outline"></ion-icon>
+        </span>
+    </button>
+
+
+    <div class="container">
+        <div class="title">Add New Auction Product</div>
+        <div class="content">
+            <form action="#">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Product Name</span>
+                        <input type="text" placeholder="Enter your Product name" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Initial Bid</span>
+                        <input type="text" placeholder="Enter your Initial Bid" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Auction End Time </span>
+                        <input type="date" placeholder="Enter Auction End Time" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Product Image</span>
+                        <input type="file" placeholder="Enter Product Image" required>
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Add Product">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
