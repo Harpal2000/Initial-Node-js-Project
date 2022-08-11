@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="/style-sheet/home-style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+<style>
+    .button-container{
+        display:flex;
+        flex-wrap: wrap;
+    }
+</style>
 
 <body>
 
@@ -26,25 +32,34 @@
         </ul>
     </nav>
 
+    <div class="button-container">
+        <button type="button" class="crud-button">
+            <span class="button__text">ADD</span>
+            <span class="button__icon">
+                <ion-icon name="add-outline"></ion-icon>
+            </span>
+        </button>
+        <button type="button" class="crud-button">
+            <span class="button__text">Delete</span>
+            <span class="button__icon">
+                <ion-icon name="trash-outline"></ion-icon>
+            </span>
+        </button>
+        <button type="button" class="crud-button">
+            <span class="button__text">Update</span>
+            <span class="button__icon">
+                <ion-icon name="refresh-outline"></ion-icon>
+            </span>
+        </button>
+        <button type="button" class="crud-button">
+            <span class="button__text">Read</span>
+            <span class="button__icon">
+                <ion-icon name="reader-outline"></ion-icon>
+            </span>
+        </button>
 
-    <button type="button" class="crud-button">
-        <span class="button__text">ADD</span>
-        <span class="button__icon">
-            <ion-icon name="add-outline"></ion-icon>
-        </span>
-    </button>
-    <button type="button" class="crud-button">
-        <span class="button__text">Delete</span>
-        <span class="button__icon">
-            <ion-icon name="trash-outline"></ion-icon>
-        </span>
-    </button>
-    <button type="button" class="crud-button">
-        <span class="button__text">Update</span>
-        <span class="button__icon">
-            <ion-icon name="refresh-outline"></ion-icon>
-        </span>
-    </button>
+
+    </div>
 
 
     <div class="container">
